@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S Cafe Tegal – Semeru Cafe</title>
+    <meta name="description"
+        content="S Cafe (Semeru Cafe) adalah cafe & eatery di Tegal dengan menu breakfast, brunch, pasta, pastry, dan kopi spesial. Cocok untuk sarapan, nugas, dan nongkrong dari pagi sampai malam." />
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Custom base styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI',
+                sans-serif;
+            background-color: #f6f3ef;
+            color: #111827;
+        }
+
+        .shadow-soft {
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .backdrop-blur-nav {
+            backdrop-filter: blur(18px);
+            background-color: rgba(246, 243, 239, 0.96);
+        }
+    </style>
+</head>
+
+<body class="antialiased text-sm md:text-base leading-relaxed">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 border-b border-[#3f454a1a] backdrop-blur-nav">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#beranda" class="flex items-center gap-2">
+                    <div
+                        class="flex h-9 w-9 items-center justify-center rounded-full bg-[#34505c] text-[11px] font-semibold tracking-[0.22em] text-white">
+                        <img src="assets/logo.jpg" alt="Logo S Cafe" class="rounded-full">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm sm:text-base font-semibold tracking-tight text-black">
+                            S Cafe Tegal
+                        </span>
+                        <span class="text-[11px] uppercase tracking-[0.22em] text-[#3f454a]">
+                            Breakfast · Coffee · Eatery
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Mobile toggle -->
+                <button type="button" id="nav-toggle"
+                    class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-3 py-2 text-xs font-medium text-[#3f454a] lg:hidden"
+                    aria-label="Toggle navigation">
+                    <span>Menu</span>
+                </button>
+
+                <!-- Desktop menu -->
+                <div class="hidden items-center gap-8 lg:flex">
+                    <div class="flex items-center gap-6 text-xs font-medium text-[#3f454a]">
+                        <a href="#beranda" class="hover:text-[#34505c] transition">Beranda</a>
+                        <a href="#menu" class="hover:text-[#34505c] transition">Menu</a>
+                        <a href="#ambience" class="hover:text-[#34505c] transition">Ambience</a>
+                        <a href="#promo" class="hover:text-[#34505c] transition">Paket & Combo</a>
+                        <a href="#review" class="hover:text-[#34505c] transition">Review</a>
+                        <a href="#lokasi" class="hover:text-[#34505c] transition">Lokasi & Kontak</a>
+                    </div>
+                    <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20reservasi%20meja"
+                        class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-4 py-2 text-xs font-semibold tracking-wide text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#3f6674] hover:shadow-lg">
+                        Reservasi / WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-nav" class="hidden border-t border-[#3f454a1a] pb-4 lg:hidden">
+                <div class="flex flex-col gap-3 pt-3 text-sm text-[#3f454a]">
+                    <a href="#beranda" class="hover:text-[#34505c] transition">Beranda</a>
+                    <a href="#menu" class="hover:text-[#34505c] transition">Menu</a>
+                    <a href="#ambience" class="hover:text-[#34505c] transition">Ambience</a>
+                    <a href="#promo" class="hover:text-[#34505c] transition">Paket & Combo</a>
+                    <a href="#review" class="hover:text-[#34505c] transition">Review</a>
+                    <a href="#lokasi" class="hover:text-[#34505c] transition">Lokasi & Kontak</a>
+                    <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20reservasi%20meja"
+                        class="mt-2 inline-flex items-center justify-center rounded-full bg-[#34505c] px-4 py-2 text-sm font-semibold tracking-wide text-white transition hover:bg-[#3f6674]">
+                        Reservasi / WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero / Beranda -->
+        <section id="beranda" class="scroll-mt-24 pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid items-center gap-10 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
+                    <!-- Hero text -->
+                    <div class="space-y-8" data-aos="fade-right">
+                        <p
+                            class="inline-flex items-center rounded-full border border-[#3f454a1a] bg-white/70 px-4 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-[#34505c]">
+                            Breakfast · Coffee · Eatery · Tegal Timur
+                        </p>
+
+                        <div class="space-y-4">
+                            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-black">
+                                Eat – Sleep – Coffee – Repeat di salah satu cafe favorit Tegal.
+                            </h1>
+                            <p class="max-w-xl text-base sm:text-lg text-[#3f454a]">
+                                S Cafe adalah outlet Semeru Cafe di Tegal yang siap nemenin kamu dari
+                                sarapan, brunch, makan siang, sampai dinner. Menu lengkap dari pastry,
+                                pasta, rice bowl, sampai specialty coffee, dengan ambience nyaman buat
+                                nugas, kerja, atau sekadar santai.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20reservasi%20meja"
+                                class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#3f6674] hover:shadow-lg">
+                                Reservasi via WhatsApp
+                            </a>
+                            <a href="#menu"
+                                class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c]">
+                                Lihat Menu
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="https://www.instagram.com/scafe.id/"
+                                class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c]">
+                                <img src="assets/instagram.png" alt="Instagram S Cafe" class="w-6">
+                            </a>
+                            <a href="https://www.tiktok.com/@scafe.id"
+                                class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c]">
+                                <!-- pakai icon tiktok sementara sebagai placeholder -->
+                                <img src="assets/tiktok.webp" alt="TIKTOK" class="w-6">
+                            </a>
+                            <a href="https://gofood.co.id/tegal/restaurant/s-cafe-ahmad-yani-ad9f38ca-f153-4570-b554-b4f56f4c180f"
+                                class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c]">
+                                <img src="assets/gofood.webp" alt="GoFood S Cafe" class="w-16">
+                            </a>
+                            <a href="https://food.grab.com/id/id/restaurant/tong-tji-s-caf%C3%A9-delivery/6-C2U2E8ADUB4ERE"
+                                class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c]">
+                                GrabFood
+                            </a>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-6 text-xs text-[#3f454a]">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-full bg-[#34505c] text-[11px] font-semibold text-white">
+                                    4.8
+                                </div>
+                                <p class="max-w-xs">
+                                    Rating sekitar 4,8/5 dengan ratusan ulasan online, jadi salah
+                                    satu cafe paling direkomendasikan di Tegal untuk breakfast sampai dinner.
+                                </p>
+                            </div>
+                            <div class="hidden h-px flex-1 bg-gradient-to-r from-[#3f454a33] to-transparent sm:block">
+                            </div>
+                            <p class="max-w-[13rem]">
+                                Buka tiap hari: weekdays mulai sekitar 11.00 – 22.00 WIB,
+                                weekend dari 07.00 – 22.00 WIB. Paling enak datang pagi untuk sarapan
+                                atau sore menjelang malam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hero visual panel -->
+                    <div class="relative" data-aos="fade-left">
+                        <div class="relative mx-auto max-w-md">
+                            <!-- Main ambience card -->
+                            <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-[#3f454a] shadow-soft">
+                                <div class="absolute inset-0 opacity-90" style="
+                      background: radial-gradient(
+                        circle at top,
+                        #3f6674 0,
+                        #3f454a 45%,
+                        #000000 100%
+                      );
+                    "></div>
+                                <div class="relative flex h-full flex-col p-6 sm:p-7">
+                                    <!-- Judul + subjudul -->
+                                    <div class="space-y-3 text-white">
+                                        <p class="text-[11px] uppercase tracking-[0.22em] text-white/70">
+                                            All day cafe vibes
+                                        </p>
+                                        <p class="text-lg sm:text-xl font-semibold">
+                                            Dari kopi pagi, lunch bareng teman kantor, sampai dinner santai
+                                            – semua bisa di satu tempat.
+                                        </p>
+                                    </div>
+
+                                    <div class="mt-4 grid grid-cols-2 gap-3 text-[11px] text-white">
+                                        <div class="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                                Coffee & Drinks
+                                            </p>
+                                            <p class="text-[11px]">
+                                                Espresso based, signature coffee seperti Avocado Presso,
+                                                mocktail segar, dan pilihan teh Tong Tji.
+                                            </p>
+                                        </div>
+                                        <div class="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                                Breakfast & Brunch
+                                            </p>
+                                            <p class="text-[11px]">
+                                                Croissant, bombolone, toast, dan menu breakfast lain buat
+                                                start hari dengan nyaman.
+                                            </p>
+                                        </div>
+                                        <div class="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                                Pasta & Rice Bowl
+                                            </p>
+                                            <p class="text-[11px]">
+                                                Pasta, udon, fried rice, sampai rice bowl Jepang-Korea yang
+                                                cocok buat makan berat.
+                                            </p>
+                                        </div>
+                                        <div class="rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                                Work & Hangout
+                                            </p>
+                                            <p class="text-[11px]">
+                                                Seating nyaman, wifi, dan ambience tenang untuk kerja dengan
+                                                laptop ataupun nongkrong bareng circle.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1"></div>
+                                </div>
+
+                                <div
+                                    class="absolute -bottom-1 right-3 w-40 rounded-2xl bg-[#34505c] p-3 text-[11px] text-white shadow-lg">
+                                    <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                        Signature picks
+                                    </p>
+                                    <ul class="space-y-1">
+                                        <li>• Avocado Presso</li>
+                                        <li>• Truffle Mushroom Alfredo Pizza</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Small overlapping card -->
+                            <div
+                                class="absolute -left-7 -bottom-7 w-40 rounded-2xl border border-[#3f454a1a] bg-white/95 p-3 text-[11px] text-[#3f454a] shadow-md sm:block">
+                                <p class="mb-1 text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                                    Mood board
+                                </p>
+                                <p>
+                                    Interior clean, nuansa kayu dan warna earthy, cocok buat foto-foto
+                                    dan bikin konten “coffee & brunch” di Tegal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu / Signature Section -->
+        <section id="menu" class="scroll-mt-24 border-y border-[#3f454a1a] bg-white py-16 sm:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col gap-6 md:flex-row md:items-end" data-aos="fade-up">
+                    <div class="space-y-3 md:flex-1">
+                        <p class="text-[11px] uppercase tracking-[0.22em] text-[#34505c]">
+                            Menu & Signature
+                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-black">
+                            Dari breakfast manis sampai rice bowl pedas.
+                        </h2>
+                        <p class="max-w-xl text-sm text-[#3f454a]">
+                            Menu S Cafe menggabungkan pastry & breakfast, pasta dan pizza,
+                            aneka nasi, sampai specialty coffee dan mocktail. Cocok buat kamu
+                            yang pengen all day dining di satu tempat.
+                        </p>
+                    </div>
+                    <div class="md:w-64">
+                        <div class="rounded-2xl bg-[#34505c] p-4 text-xs text-white md:ml-auto">
+                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em]">
+                                Kisaran harga
+                            </p>
+                            <p class="mb-2">
+                                Rata-rata bill sekitar
+                                <span class="font-semibold">Rp50.000–75.000</span> per orang
+                                untuk makan & minum nyaman di cafe.
+                            </p>
+                            <p class="text-white/80">
+                                Ada banyak opsi dari snack ringan sampai main course, jadi
+                                gampang disesuaikan sama budget.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu grid -->
+                <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-7">
+                    <!-- Signature rice / main -->
+                    <article data-aos="fade-up" data-aos-delay="50"
+                        class="flex flex-col gap-3 rounded-2xl border border-[#3f454a1a] bg-[#f6f3ef] p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Main Course · Rice
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Nasi Goreng S Cafe & Truffle Beef Fried Rice
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Varian nasi goreng khas S Cafe dengan topping melimpah, termasuk
+                            versi truffle yang aromatik. Pas buat kamu yang cari comfort food
+                            dengan sentuhan cafe.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Untuk: Dinner & makan berat</span>
+                            <span class="rounded-full bg-white px-3 py-1 text-[11px]">
+                                ± Rp45.000–70.000
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Set menu / rice bowl Jepang -->
+                    <article data-aos="fade-up" data-aos-delay="80"
+                        class="flex flex-col gap-3 rounded-2xl border border-[#3f454a1a] bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Set Menu · Rice Bowl
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Chicken Katsu Set & Honey Miso Salmon
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Paket nasi dengan chicken katsu atau salmon honey miso, lengkap
+                            dengan lauk dan side dish ala Jepang. Cocok untuk kamu yang mau
+                            makan lengkap tapi tetap praktis.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Untuk: 1 orang, porsi kenyang</span>
+                            <span class="rounded-full bg-[#f6f3ef] px-3 py-1 text-[11px]">
+                                ± Rp60.000–85.000
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Pasta & pizza -->
+                    <article data-aos="fade-up" data-aos-delay="110"
+                        class="flex flex-col gap-3 rounded-2xl border border-[#3f454a1a] bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Pasta & Pizza
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Pasta Aglio Olio & Truffle Mushroom Alfredo Pizza
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Pilihan pasta klasik seperti aglio olio, carbonara, pesto, sampai
+                            pizza dengan topping truffle mushroom yang wangi dan creamy.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Untuk: Sharing 2–3 orang</span>
+                            <span class="rounded-full bg-[#f6f3ef] px-3 py-1 text-[11px]">
+                                ± Rp50.000–80.000
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Coffee -->
+                    <article data-aos="fade-up" data-aos-delay="140"
+                        class="flex flex-col gap-3 rounded-2xl border border-[#3f454a1a] bg-[#f6f3ef] p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Coffee & Beverages
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Avocado Presso, Kopi Ncek & Coldbrew Series
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Dari klasik seperti cappuccino dan latte, sampai signature coffee
+                            ala S Cafe seperti Avocado Presso, Kopi Ncek, dan berbagai varian
+                            cold brew dengan rasa fruity.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Tersedia hot & iced</span>
+                            <span class="rounded-full bg-white px-3 py-1 text-[11px]">
+                                ± Rp25.000–45.000
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Pastry & dessert -->
+                    <article data-aos="fade-up" data-aos-delay="170"
+                        class="flex flex-col gap-3 rounded-2xl border border-[#3f454a1a] bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Pastry & Dessert
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Croissant, Bombolone & Tiramisu
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Rak pastry berisi croissant, quiche, bombolone dengan berbagai
+                            isian, dan dessert manis seperti lava cake serta tiramisu – ideal
+                            untuk teman kopi atau ngetik tugas lama-lama.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Untuk: Teman ngopi & ngobrol</span>
+                            <span class="rounded-full bg-[#f6f3ef] px-3 py-1 text-[11px]">
+                                ± Rp20.000–40.000
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Snack & sharing -->
+                    <article data-aos="fade-up" data-aos-delay="200"
+                        class="flex flex-col gap-3 rounded-2xl border border-dashed border-[#3f454a33] bg-white p-5">
+                        <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#34505c]">
+                            Snack · Sharing
+                        </p>
+                        <h3 class="text-base font-semibold text-black">
+                            Signature Chicken Wings, Fries & Finger Food
+                        </h3>
+                        <p class="text-sm text-[#3f454a]">
+                            Nori fries, truffle parmesan fries, chicken wings, dan aneka
+                            finger food lain yang enak buat teman nongkrong rame-rame tanpa
+                            harus pesan main course berat.
+                        </p>
+                        <div class="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-[#3f454a]">
+                            <span>Untuk: 2–4 orang sharing</span>
+                            <span class="rounded-full bg-[#f6f3ef] px-3 py-1 text-[11px]">
+                                ± Rp30.000–60.000
+                            </span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Category summary -->
+                <div class="mt-10 grid gap-6 border-t border-[#3f454a1a] pt-8 md:grid-cols-3">
+                    <div class="space-y-2 text-sm text-[#3f454a]">
+                        <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                            Coffee & Beverages
+                        </p>
+                        <p>
+                            Espresso based, signature coffee, teh Tong Tji, mocktail, dan
+                            minuman non-kopi lain.
+                        </p>
+                        <p class="text-xs">
+                            Ideal untuk WFC, ngerjain tugas, atau sekadar catch up bareng
+                            teman.
+                        </p>
+                    </div>
+                    <div class="space-y-2 text-sm text-[#3f454a]">
+                        <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                            Main Course
+                        </p>
+                        <p>
+                            Nasi goreng, pasta, udon, steak, set menu Jepang, sampai rice bowl
+                            dengan berbagai topping.
+                        </p>
+                        <p class="text-xs">
+                            Cocok untuk lunch, dinner, atau makan keluarga kecil.
+                        </p>
+                    </div>
+                    <div class="space-y-2 text-sm text-[#3f454a]">
+                        <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                            Pastry, Breakfast & Snack
+                        </p>
+                        <p>
+                            Pastry, croissant, toast, bombolone, dan dessert manis lain yang
+                            pas untuk sarapan atau teman kopi.
+                        </p>
+                        <p class="text-xs">
+                            Pilihan pas buat kamu yang datang pagi atau hanya ingin ngemil
+                            ringan.
+                        </p>
+                    </div>
+                </div>
+                <a href="https://linktr.ee/semerucafe"
+                    class="inline-flex items-center justify-center rounded-full border border-[#3f454a33] px-6 py-3 text-sm font-medium text-[#3f454a] transition hover:border-[#34505c] hover:text-[#34505c] float-right mt-6">
+                    Lihat Menu Lengkap
+                </a>
+            </div>
+        </section>
+
+        <!-- Ambience / Vibes Section -->
+        <section id="ambience" class="scroll-mt-24 bg-white py-16 sm:py-20 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end" data-aos="fade-up">
+                    <div class="space-y-3 lg:flex-1">
+                        <p class="text-[11px] uppercase tracking-[0.22em] text-[#34505c]">
+                            Ambience & Vibes
+                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-black">
+                            Cozy untuk nugas, hangat untuk sarapan dan dinner.
+                        </h2>
+                        <p class="max-w-xl text-sm text-[#3f454a]">
+                            Dengan interior modern, pencahayaan warm, dan seating yang rapi,
+                            S Cafe nyaman dipakai sendiri, berdua, maupun bareng satu geng.
+                            Banyak pengunjung datang untuk breakfast, lunch, sampai dinner
+                            karena suasananya yang homey.
+                        </p>
+                    </div>
+                    <div class="lg:w-72">
+                        <div class="rounded-2xl border border-dashed border-[#3f454a33] p-4 text-xs text-[#3f454a]">
+                            <p class="mb-1 font-semibold text-[#34505c]">
+                                Datang dengan siapa?
+                            </p>
+                            <ul class="space-y-1">
+                                <li>• Teman kuliah / circle tongkrongan</li>
+                                <li>• Pasangan untuk coffee date & dinner</li>
+                                <li>• Keluarga kecil untuk makan bareng</li>
+                                <li>• Tim kerja untuk meeting santai</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial-style layout -->
+                <div class="flex flex-col gap-8 lg:flex-row">
+                    <!-- Text column -->
+                    <div class="space-y-6 lg:w-5/12" data-aos="fade-right">
+                        <div class="space-y-2 text-sm text-[#3f454a]">
+                            <p class="text-xs uppercase tracking-[0.18em] text-[#34505c]">
+                                Cafe untuk sepanjang hari
+                            </p>
+                            <p>
+                                Pagi dan weekend dibuka lebih awal untuk sarapan, sementara
+                                siang sampai malam jadi tempat favorit untuk lunch dan dinner.
+                                Ada area indoor yang adem dan beberapa spot dengan cahaya
+                                alami untuk foto-foto.
+                            </p>
+                        </div>
+                        <div class="space-y-2 text-sm text-[#3f454a]">
+                            <p class="text-xs uppercase tracking-[0.18em] text-[#34505c]">
+                                Waktu terbaik berkunjung
+                            </p>
+                            <ul class="space-y-1 text-sm">
+                                <li>
+                                    <span class="font-semibold text-black">Pagi (weekend)</span> –
+                                    vibes sarapan santai dengan pastry & coffee.
+                                </li>
+                                <li>
+                                    <span class="font-semibold text-black">Sore – malam</span> –
+                                    enak buat dinner, ngobrol lama, dan menikmati suasana cafe
+                                    yang hangat.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2 text-sm text-[#3f454a]">
+                            <p class="text-xs uppercase tracking-[0.18em] text-[#34505c]">
+                                Detail kecil yang bikin betah
+                            </p>
+                            <ul class="space-y-1 text-sm">
+                                <li>• Kursi & meja nyaman untuk duduk lama.</li>
+                                <li>• Musik latar mendukung, nggak terlalu berisik.</li>
+                                <li>• Melayani dine-in, takeaway, dan delivery.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- "Photo" grid (placeholders) -->
+                    <div class="grid flex-1 gap-4 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr]" data-aos="fade-left">
+                        <!-- Tall ambience card -->
+                        <div
+                            class="flex flex-col justify-between rounded-3xl bg-[#3f454a] p-4 text-xs text-white sm:row-span-2">
+                            <div>
+                                <p class="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/70">
+                                    Interior S Cafe
+                                </p>
+                                <p class="text-sm mt-4 text-white/70">
+                                    Susunan meja yang rapi, lighting hangat, dan dekor simpel
+                                    bikin cafe ini nyaman buat segala momen – dari kerja sendiri
+                                    sampai makan bareng keluarga.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Cozy corner -->
+                        <div
+                            class="flex flex-col rounded-3xl border border-[#3f454a1a] bg-white p-4 text-xs text-[#3f454a]">
+                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Cozy corner
+                            </p>
+                            <p class="mb-3 text-sm text-black">
+                                Beberapa spot dekat jendela dan dinding kayu jadi favorit
+                                untuk baca buku, nge-laptop, atau foto OOTD.
+                            </p>
+                        </div>
+
+                        <!-- Live music / vibes -->
+                        <div
+                            class="flex flex-col rounded-3xl border border-[#3f454a1a] bg-[#f6f3ef] p-4 text-xs text-[#3f454a]">
+                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Suasana ramai tapi santai
+                            </p>
+                            <p class="mb-3 text-sm text-black">
+                                Di jam-jam tertentu cafe terasa lebih hidup, tapi tetap nyaman
+                                untuk ngobrol tanpa teriak-teriak.
+                            </p>
+                        </div>
+
+                        <!-- Food close-up -->
+                        <div
+                            class="flex flex-col rounded-3xl border border-dashed border-[#3f454a33] bg-white p-4 text-xs text-[#3f454a]">
+                            <p class="mb-1 text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Food close-up
+                            </p>
+                            <p class="mb-3 text-sm text-black">
+                                Plating menu seperti pasta, rice bowl, dan dessert tertata
+                                rapi – cocok banget kalau difoto sebelum dimakan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo / Paket Section -->
+        <section id="promo" class="scroll-mt-24 bg-[#34505c] py-16 text-white sm:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col gap-4 md:flex-row md:items-end" data-aos="fade-up">
+                    <div class="space-y-3 md:flex-1">
+                        <p class="text-[11px] uppercase tracking-[0.22em] text-white/70">
+                            Paket & Combo
+                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-semibold">
+                            Ide combo hemat buat breakfast, brunch, dan nongkrong.
+                        </h2>
+                        <p class="max-w-xl text-sm text-white/80">
+                            Paket di bawah ini adalah contoh bundling menu berdasarkan
+                            kisaran harga di S Cafe. Promo dan paket resmi bisa berubah
+                            sewaktu-waktu – konfirmasi dulu via WhatsApp sebelum datang.
+                        </p>
+                    </div>
+                    <div class="md:w-64">
+                        <p class="text-xs text-white/80">
+                            Klik "Tanya via WhatsApp" untuk menanyakan ketersediaan, detail
+                            harga, dan menyesuaikan dengan kebutuhan acara kamu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Promo cards -->
+                <div class="mt-10 grid gap-6 md:grid-cols-3 md:gap-7">
+                    <!-- Paket 1 -->
+                    <article
+                        class="flex flex-col justify-between rounded-2xl bg-white/95 p-5 text-[#3f454a] shadow-md"
+                        data-aos="fade-up" data-aos-delay="50">
+                        <div class="space-y-3">
+                            <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Paket Breakfast Berdua
+                            </p>
+                            <h3 class="text-base font-semibold text-black">
+                                Morning Coffee & Pastry Date
+                            </h3>
+                            <ul class="space-y-1 text-sm">
+                                <li>• 2 menu pastry / toast</li>
+                                <li>• 2 coffee / tea pilihan</li>
+                                <li>• Tambah 1 dessert sharing (opsional)</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 space-y-3 text-xs">
+                            <p>
+                                <span class="font-semibold text-black">Range harga:</span>
+                                ± Rp120.000–170.000 / 2 orang
+                            </p>
+                            <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20tanya%20Paket%20Breakfast%20Berdua"
+                                class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-4 py-2 text-[11px] font-semibold text-white transition hover:bg-[#3f6674]">
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Paket 2 -->
+                    <article
+                        class="flex flex-col justify-between rounded-2xl bg-white/95 p-5 text-[#3f454a] shadow-md"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="space-y-3">
+                            <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Paket Lunch / Dinner
+                            </p>
+                            <h3 class="text-base font-semibold text-black">
+                                Family & Squad Feast
+                            </h3>
+                            <ul class="space-y-1 text-sm">
+                                <li>• 3–4 main course (nasi goreng, pasta, rice bowl)</li>
+                                <li>• 2 snack / finger food untuk di tengah</li>
+                                <li>• 4 minuman (kopi & non-kopi)</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 space-y-3 text-xs">
+                            <p>
+                                <span class="font-semibold text-black">Range harga:</span>
+                                ± Rp350.000–450.000 / 4–5 orang
+                            </p>
+                            <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20tanya%20Paket%20Family%20%26%20Squad%20Feast"
+                                class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-4 py-2 text-[11px] font-semibold text-white transition hover:bg-[#3f6674]">
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Paket 3 -->
+                    <article
+                        class="flex flex-col justify-between rounded-2xl bg-white/95 p-5 text-[#3f454a] shadow-md"
+                        data-aos="fade-up" data-aos-delay="150">
+                        <div class="space-y-3">
+                            <p class="text-[11px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Paket Nongkrong Santai
+                            </p>
+                            <h3 class="text-base font-semibold text-black">
+                                Coffee, Fries & Chit-chat
+                            </h3>
+                            <ul class="space-y-1 text-sm">
+                                <li>• 2–3 snack (fries / wings / finger food)</li>
+                                <li>• 3–4 minuman (kopi & non-kopi)</li>
+                                <li>• Cocok untuk WFC / nugas bareng</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 space-y-3 text-xs">
+                            <p>
+                                <span class="font-semibold text-black">Range harga:</span>
+                                ± Rp150.000–230.000 / 3–4 orang
+                            </p>
+                            <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20tanya%20Paket%20Nongkrong%20Santai"
+                                class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-4 py-2 text-[11px] font-semibold text-white transition hover:bg-[#3f6674]">
+                                Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review / Ulasan -->
+        <section id="review" class="scroll-mt-24 bg-[#f6f3ef] py-16 sm:py-20 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end" data-aos="fade-up">
+                    <div class="space-y-3 lg:flex-1">
+                        <p class="text-[11px] uppercase tracking-[0.22em] text-[#34505c]">
+                            Review Pengunjung
+                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-semibold text-black">
+                            Disukai karena rasa, ambience, dan pilihan menu yang lengkap.
+                        </h2>
+                        <p class="max-w-xl text-sm text-[#3f454a]">
+                            Berdasarkan ulasan di berbagai platform, S Cafe dikenal punya
+                            spaghetti carbonara yang enak, nasi goreng favorit, pastry
+                            yang fresh, dan kopi yang strong tapi tetap smooth – ditambah
+                            pelayanan ramah dan suasana nyaman.
+                        </p>
+                    </div>
+                    <div class="lg:w-72">
+                        <div class="rounded-2xl border border-[#3f454a1a] bg-white p-4 text-xs text-[#3f454a]">
+                            <p class="text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                                Snapshot rating
+                            </p>
+                            <p class="mt-1 text-sm">
+                                Google rating sekitar
+                                <span class="font-semibold text-black">4.6 / 5</span> dengan
+                                700+ ulasan, dan jadi salah satu cafe teratas di Tegal.
+                            </p>
+                            <p class="mt-2 text-[11px]">
+                                Banyak yang memuji kombinasi rasa makanan, pelayanan, dan
+                                suasana yang bikin betah.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review cards -->
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article
+                        class="flex h-full flex-col rounded-2xl border border-[#3f454a1a] bg-white p-5 text-sm text-[#3f454a]"
+                        data-aos="fade-up" data-aos-delay="50">
+                        <p class="text-xs font-semibold text-[#34505c]">
+                            “Spaghetti & nasi goreng favorit”
+                        </p>
+                        <p class="mt-2">
+                            Banyak pengunjung menyebut spaghetti carbonara dan nasi goreng
+                            S Cafe sebagai menu andalan dengan rasa konsisten dan porsi yang
+                            pas.
+                        </p>
+                        <p class="mt-3 text-[11px] text-[#3f454a]">
+                            Cocok untuk lunch atau dinner kalau kamu suka comfort food
+                            bergaya cafe.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="100"
+                        class="flex h-full flex-col rounded-2xl border border-[#3f454a1a] bg-white p-5 text-sm text-[#3f454a]">
+                        <p class="text-xs font-semibold text-[#34505c]">
+                            “Ambience cozy, enak buat lama-lama”
+                        </p>
+                        <p class="mt-2">
+                            Suasana yang rapi dan hangat bikin banyak orang betah duduk
+                            lama, baik untuk ngobrol maupun kerja dengan laptop.
+                        </p>
+                        <p class="mt-3 text-[11px] text-[#3f454a]">
+                            Waktu favorit: pagi untuk breakfast dan sore hingga malam untuk
+                            ngobrol santai.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="150"
+                        class="flex h-full flex-col rounded-2xl border border-[#3f454a1a] bg-white p-5 text-sm text-[#3f454a]">
+                        <p class="text-xs font-semibold text-[#34505c]">
+                            “Pelayanan ramah & informatif”
+                        </p>
+                        <p class="mt-2">
+                            Staff dinilai ramah dan helpful, siap membantu rekomendasi menu
+                            dan penyesuaian selera pengunjung.
+                        </p>
+                        <p class="mt-3 text-[11px] text-[#3f454a]">
+                            Kalau pertama kali datang, kamu bisa minta rekomendasi langsung
+                            ke barista atau waiter.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="200"
+                        class="flex h-full flex-col rounded-2xl border border-[#3f454a1a] bg-white p-5 text-sm text-[#3f454a]">
+                        <p class="text-xs font-semibold text-[#34505c]">
+                            “Breakfast & pastry enak”
+                        </p>
+                        <p class="mt-2">
+                            Pagi hari, banyak yang datang untuk menikmati pastry, croissant,
+                            dan menu breakfast lain yang disajikan hangat.
+                        </p>
+                        <p class="mt-3 text-[11px] text-[#3f454a]">
+                            Pas untuk kamu yang suka mulai hari dengan kopi dan roti di
+                            tempat yang tenang.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="250"
+                        class="flex h-full flex-col rounded-2xl border border-[#3f454a1a] bg-white p-5 text-sm text-[#3f454a]">
+                        <p class="text-xs font-semibold text-[#34505c]">
+                            “Menu variatif, dari Asia sampai Western”
+                        </p>
+                        <p class="mt-2">
+                            Kombinasi menu Asia, Jepang, sampai Western bikin tiap anggota
+                            rombongan bisa pesan sesuai selera masing-masing.
+                        </p>
+                        <p class="mt-3 text-[11px] text-[#3f454a]">
+                            Nggak bingung lagi kalau datang rame-rame dengan selera yang
+                            berbeda.
+                        </p>
+                    </article>
+
+                    <article data-aos="fade-up" data-aos-delay="300"
+                        class="flex h-full flex-col rounded-2xl border-dashed border-[#3f454a33] bg-white p-5 text-xs text-[#3f454a]">
+                        <p class="mb-2 text-[10px] uppercase tracking-[0.18em] text-[#34505c]">
+                            Ingin lihat review lengkap?
+                        </p>
+                        <p>
+                            Review lengkap bisa dilihat di Google Maps, Restaurant Guru, dan
+                            platform kuliner lain dengan kata kunci “S Cafe Tegal” atau
+                            “S Cafe Ahmad Yani”.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lokasi & Kontak -->
+        <section id="lokasi" class="scroll-mt-24 bg-[#3f454a] py-16 text-white sm:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-start" data-aos="fade-up">
+                    <div class="space-y-3 lg:flex-1">
+                        <p class="text-[11px] uppercase tracking-[0.22em] text-white/70">
+                            Lokasi & Kontak
+                        </p>
+                        <h2 class="text-2xl sm:text-3xl font-semibold">
+                            Strategis di Jl. Ahmad Yani, mudah dijangkau.
+                        </h2>
+                        <p class="max-w-xl text-sm text-white/80">
+                            S Cafe berlokasi di Jl. Ahmad Yani No.169, area Tegal Timur. Lokasi
+                            ini mudah ditemukan di Google Maps dan dekat dengan area kota,
+                            cocok jadi tujuan breakfast, lunch, atau dinner.
+                        </p>
+                    </div>
+
+                    <div class="lg:w-72 space-y-3 text-sm text-white/80">
+                        <div>
+                            <p class="text-xs font-semibold text-white/80">Alamat</p>
+                            <p class="text-sm">
+                                Jl. Ahmad Yani No.169, Mangkukusuman,<br />
+                                Kec. Tegal Timur, Kota Tegal, Jawa Tengah 52121
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-white/80">
+                                Jam operasional
+                            </p>
+                            <p class="text-sm">
+                                Senin–Jumat: 11.00 – 22.00 WIB<br />
+                                Sabtu & Minggu: 07.00 – 22.00 WIB
+                            </p>
+                            <p class="mt-1 text-[11px]">
+                                *Jam bisa berubah, cek ulang di Google Maps atau hubungi via
+                                WhatsApp.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]" data-aos="fade-up"
+                    data-aos-delay="50">
+                    <!-- Map placeholder -->
+                    <div class="flex flex-col justify-between rounded-3xl bg-white p-5 text-sm text-[#3f454a]">
+                        <div>
+                            <p class="text-xs font-semibold text-[#34505c]">
+                                Map & Arah Lokasi
+                            </p>
+                            <p class="mt-2">
+                                Klik tombol di bawah untuk membuka lokasi resmi S Cafe di
+                                Google Maps dan atur rute dari posisi kamu sekarang.
+                            </p>
+                        </div>
+                        <div class="mt-4 space-y-3">
+                            <a href="https://www.google.com/maps/place/S+Cafe/@-6.8645192,109.1365451,15z/data=!4m5!3m4!1s0x0:0x3a48b7db1f6ad257!8m2!3d-6.864508!4d109.136509"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center rounded-full bg-[#34505c] px-5 py-2.5 text-xs font-semibold text-white transition hover:bg-[#3f6674]">
+                                Buka di Google Maps
+                            </a>
+                            <!-- Embed map -->
+                            <div class="mt-3 overflow-hidden rounded-2xl border border-[#3f454a33] bg-[#f6f3ef]">
+                                <div class="aspect-[16/9]">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=S+Cafe+Tegal&hl=id&z=17&output=embed"
+                                        style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" class="h-full w-full"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact & CTA -->
+                    <div
+                        class="flex flex-col justify-between rounded-3xl border border-[#ffffff1a] bg-[#3f454a] p-5 text-sm text-white">
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs font-semibold text-white/80">
+                                    WhatsApp & Kontak
+                                </p>
+                                <p class="mt-2 text-sm">
+                                    Nomor WhatsApp utama:
+                                    <span class="font-semibold">+62 852-2911-5997</span>
+                                </p>
+                                <p class="mt-1 text-[11px] text-white/70">
+                                    Chat untuk reservasi meja, info menu, atau menanyakan paket
+                                    dan kebutuhan acara kecil.
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="text-xs font-semibold text-white/80">
+                                    Media sosial & pemesanan online
+                                </p>
+                                <ul class="mt-2 space-y-1 text-sm">
+                                    <li>
+                                        Instagram:
+                                        <a href="https://www.instagram.com/scafe.id/" target="_blank"
+                                            rel="noopener noreferrer" class="underline-offset-2 hover:underline">
+                                            @scafe.id
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Linktree:
+                                        <a href="https://linktr.ee/semerucafe" target="_blank" rel="noopener noreferrer"
+                                            class="underline-offset-2 hover:underline">
+                                            Semeru Cafe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        GoFood:
+                                        <a href="https://gofood.co.id/tegal/restaurant/s-cafe-ahmad-yani-ad9f38ca-f153-4570-b554-b4f56f4c180f"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="underline-offset-2 hover:underline">
+                                            S Cafe, Ahmad Yani
+                                        </a>
+                                    </li>
+                                    <li>
+                                        GrabFood:
+                                        <a href="https://food.grab.com/id/id/restaurant/tong-tji-s-caf%C3%A9-delivery/6-C2U2E8ADUB4ERE"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="underline-offset-2 hover:underline">
+                                            Tong Tji S Café
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 space-y-3">
+                            <a href="https://wa.me/6285229115997?text=Halo%20S%20Cafe%2C%20saya%20ingin%20reservasi%20meja"
+                                class="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-[#34505c] transition hover:bg-[#f6f3ef]">
+                                Chat WhatsApp untuk Reservasi
+                            </a>
+                            <p class="text-[11px] text-white/70">
+                                Sertakan jumlah orang, tanggal, jam kedatangan, dan kalau
+                                ada, prefer seating (misalnya dekat jendela atau area yang
+                                lebih tenang).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#3f454a1a] bg-white py-6 text-xs">
+        <div
+            class="max-w-6xl mx-auto flex flex-col items-center justify-between gap-3 px-4 text-[#3f454a] sm:flex-row sm:px-6 lg:px-8">
+            <p>
+                ©
+                <span id="year"></span>
+                S Cafe Tegal · Semeru Cafe. All rights reserved.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="#beranda" class="underline-offset-2 hover:underline">
+                    Kembali ke atas
+                </a>
+                <span class="hidden h-3 w-px bg-[#3f454a33] sm:inline-block"></span>
+                <p class="text-[11px]">
+                    Landing page ini dibuat untuk membantu pengunjung menemukan info
+                    menu, ambience, dan cara reservasi di S Cafe Tegal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Toggle mobile nav
+            const toggle = document.getElementById('nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            if (toggle && mobileNav) {
+                toggle.addEventListener('click', function () {
+                    mobileNav.classList.toggle('hidden');
+                });
+            }
+
+            // Dynamic year
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Init AOS
+            AOS.init({
+                duration: 700,
+                once: true,
+                easing: 'ease-out-cubic',
+                offset: 80,
+            });
+        })();
+    </script>
+</body>
+
+</html>
